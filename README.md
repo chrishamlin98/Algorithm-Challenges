@@ -10,3 +10,7 @@ do the same thing as my brute force method, without specified inputs.
 
 My last method is to work through a graph based solution using data structures.
 */
+
+// Update - The brute force method turned into multiple ways to syntactically
+accomplish the same thing.  As suggested by multiple people, using a hash table
+is more efficient. //

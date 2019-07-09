@@ -1,7 +1,6 @@
 # Algorithm-Challenges
 
-/* The first challenge was a double sum type of problem.  
-
+The first challenge is a <a href="https://github.com/chrishamlin98/Algorithm-Challenges/tree/master/Double%20Sum">Double Sum</a> problem.  
 My brute force method is to create a basic Algorithm that uses multiple
 pre-defined variables and an if-else chain.
 

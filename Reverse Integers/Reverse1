@@ -66,20 +66,28 @@ This one works for all test cases; however, I am unsure as to how the program
 understands MIN_VALUE... Is it just something built into Java?
 */
 
-public int reverse(int x) {
-        long res = 0;
-        while (x != 0) {
-            res = res * 10 + x % 10;
-            x = x / 10;
-        }
+public class ReverseIntegers {
 
-        if (res < Integer.MIN_VALUE || res > Integer.MAX_VALUE) {
-            return 0;
-        } else {
-            return (int)res;
-        }
-    }
+	public static void main(String[] args) {
+		int x = 10795;
+		System.out.println(reverse(x));
+
+	}
+
+	public static int reverse(int x) {
+		long rev = 0;
+		while (x != 0) {
+			rev = rev * 10 + x % 10;
+			x = x / 10;
+		}
+		if (rev < Integer.MIN_VALUE || rev > Integer.MAX_VALUE) {
+			return 0;
+		} else {
+			return (int)rev;
+		}
+	}
 }
+
 
 **************************************************
 

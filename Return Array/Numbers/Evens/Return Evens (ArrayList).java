@@ -1,99 +1,29 @@
-import java.util.Arrays;
+package dcp4_28_19;
+
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-public class returnEvens {
+public class ReturnEvens2 {
 
-  public static void main(String[] args) {
-    List<Integer> numbers = {951, 402, 984, 651, 360, 69, 408, 319, 601, 485, 980};
-  }
+	    public static void main(String[] args) {
+	     int[] numbers = {402, 984, 651, 360, 69, 408, 319, 601, 485, 980, 507, 725, 547, 544,
+	    	        615, 83, 165, 141, 501, 263, 617, 865, 575, 219, 390, 984, 592, 236, 105, 942, 941,
+	    	        386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345,
+	    	        399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217,
+	    	        815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717,
+	    	        958, 609, 842, 451, 688, 753, 854, 685, 93, 857, 440, 380, 126, 721, 328, 753, 470,
+	    	        743};
+	     System.out.println(Arrays.toString(ReturnEvens.evenNumbers(numbers)));
+	     }
 
-  public int evenNumbers (int[]) {
-    int resultIndex = 0;
-    ArrayList<Integer> input = new ArrayList<>();
-    for (int i = 0; i <= input.length - 1; i++) {
-        input.add(i % 2 == 0);
-    }
-  }
-}
-
-
-/*
-public class ReturnEvens {
-
-    public static void main(String[] args) {
-     int[] numbers = {951, 402, 984, 651, 360, 69, 408, 319, 601, 485, 980};
-    }
-    public int evenNumbers(int[] input) {
-      int resultIndex = 0;
-     // creating new array //
-      int [] result = new int[];
-     // looping through array //
-      for (int i = 0; i < input.length; i++) {
-        // Creating parameters of only even numbers //
-        if (input[i] % 2 == 0) {
-          result[resultIndex] = input[i];
-          resultIndex++;
-        }
-      }
-      return result;
-    }
-}
-
-
-
-
-
-
-// so now the idea is that you want this list to have k[i] added to it
-// at each even interval.
-
-List <Rectangle> list1=new ArrayList<Rectangle>();
-  list1.add(new Rectangle());
-
-  List<Circle> list2=new ArrayList <Circle>();
-  list2.add(new Circle());
-  list2.add(new Circle());
-
-  drawShapes(list1);
-
-
-
-
-  public class twoSumArray {
-
-  	public twoSumArray(int[] nums, int target)
-      {
-  		for(int i = 0; i < nums.length; i++)
-          {
-              for (int j = i + 1; j < nums.length; j++)
-              {
-                  if (nums[j] == target - nums[i])
-                  {
-
-                  }
-              }
+  public static ArrayList<Integer> evenNumbers(int[] k) {
+      ArrayList<Integer> result = new ArrayList<>();
+      for (int i = 0; i < k.length; i++) {
+          if (k[i] % 2 == 0) {
+              result.add(k[i]);
           }
       }
-
-      List <Rectangle> list1=new ArrayList<Rectangle>();
-      	list1.add(new Rectangle());
-
-      	List<Circle> list2=new ArrayList <Circle>();
-      	list2.add(new Circle());
-      	list2.add(new Circle());
-
-      	drawShapes(list1);
-      	drawShapes(list2);
-
-  	public static void main(String[] args) {
-  		ArrayList<Integer>myArray = new ArrayList<Integer>();
-  		myArray.add(2);
-  		myArray.add(7);
-  		myArray.add(11);
-  		myArray.add(15);
-  		int target = 9;
-  		ArrayList<Integer> result = twoSum(myArray,target);
-          for(int j : result)
-          	System.out.print("["+j+","+target+"]");
-  	}
+      return result;
   }
+}

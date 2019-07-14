@@ -19,77 +19,75 @@ problem, assume that your function returns 0 when the reversed integer overflows
 */
 
 class Solution {
-    public int reverse(int x) {
-    int x = 1234567, reversed = 0;
-    for(;x != 0; x /= 10) {
-        int digit = x % 10;
-        reversed = reversed * 10 + digit;
-    }
-    System.out.println(reversed);
+	public int reverse(int x) {
+		int x = 1234567, reversed = 0;
+		for (; x != 0; x /= 10) {
+			int digit = x % 10;
+			reversed = reversed * 10 + digit;
+		}
+		System.out.println(reversed);
+	}
 }
-}
-
 
 *********************************
 
 class Solution {
-    public int reverse(int x) {
-int x = 1234, reversed = 0;
-        while(x != 0) {
-            int digit = x % 10;
-            reversed = reversed * 10 + digit;
-            x /= 10;
-        }
-        System.out.println(reversed);
-    }
-}
-
-/*
-********************************
-// This one works on leetcode, while the others run as a main method //
-
-// However, it does not work for large test cases //
-*/
-
-public int reverse(int x) {
-  int rev_num = 0;
-  while (x != 0)
-  {
-    rev_num = rev_num*10 + x%10;
-    x = x/10;
-  }
-  return rev_num;
-}
-/*
-*****************************************
-This one works for all test cases; however, I am unsure as to how the program
-understands MIN_VALUE... Is it just something built into Java?
-*/
-
-public class ReverseIntegers {
-
-	public static void main(String[] args) {
-		int x = 10795;
-		System.out.println(reverse(x));
-
+	public int reverse(int x) {
+		int x = 1234, reversed = 0;
+		while (x != 0) {
+			int digit = x % 10;
+			reversed = reversed * 10 + digit;
+			x /= 10;
+		}
+		System.out.println(reversed);
 	}
 
-	public static int reverse(int x) {
-		long rev = 0;
+}
+
+	/*
+	 ********************************
+	 * // This one works on leetcode, while the others run as a main method //
+	 * 
+	 * // However, it does not work for large test cases //
+	 */
+
+	public int reverse(int x) {
+		int rev_num = 0;
 		while (x != 0) {
-			rev = rev * 10 + x % 10;
+			rev_num = rev_num * 10 + x % 10;
 			x = x / 10;
 		}
-		if (rev < Integer.MIN_VALUE || rev > Integer.MAX_VALUE) {
-			return 0;
-		} else {
-			return (int)rev;
+		return rev_num;
+	}
+	/*
+	 *****************************************
+	 * This one works for all test cases; however, I am unsure as to how the program
+	 * understands MIN_VALUE... Is it just something built into Java?
+	 */
+
+	public class ReverseIntegers {
+
+		public static void main(String[] args) {
+			int x = 10795;
+			System.out.println(reverse(x));
+
+		}
+
+		public static int reverse(int x) {
+			long rev = 0;
+			while (x != 0) {
+				rev = rev * 10 + x % 10;
+				x = x / 10;
+			}
+			if (rev < Integer.MIN_VALUE || rev > Integer.MAX_VALUE) {
+				return 0;
+			} else {
+				return (int) rev;
+			}
 		}
 	}
-}
 
-
-**************************************************
+	**************************************************
 
 // Leetcode solution //
 

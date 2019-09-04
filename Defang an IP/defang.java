@@ -25,15 +25,15 @@ build...
 
 class Solution {
     public String defangIPaddr(String address) {
-        String[] defangIPaddr;
-        for(int i = 0, i < address.length(); i++)
-          {
-          if(".")
-          {
-            System.out.println("[.]");
-          }
-        }
-        return Solution;
+    final StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < address.length(); i++) {
+        if (address.charAt(i) == '.')
+            sb.append("[.]");
+        else
+            sb.append(address.charAt(i));
+    }
+
+    return sb.toString();
     }
 }
 */

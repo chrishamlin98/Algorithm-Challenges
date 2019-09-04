@@ -15,11 +15,13 @@ Input: "LOVELY"
 Output: "lovely"
 */
 
-public static void BigToLittle(char little []) {
-  little [] =
-  // I need to find the code that changes capital letters to lowercase
-}
+class Solution {
+    public String toLowerCase(String str) {
 
-public static void main(String []args) {
+        String Solution = str.toLowerCase();
+        System.out.println(Solution);
+
+        return Solution;
+    }
 
 }

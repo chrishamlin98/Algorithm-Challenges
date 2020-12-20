@@ -60,12 +60,12 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        count = 0
-        dict = {}
-        for dig in nums:
-            if dig in dict():
-                dig += 1
-            else:
-                dict = (dig, count)
-        return
+        length = 0
+        if len(nums) == 0:
+            return length
+        for i in range(1, len(nums)):
+            if nums[length] != nums[i]:
+                length += 1
+                nums[length] = nums[i]
+        return length+1
 # leetcode submit region end(Prohibit modification and deletion)

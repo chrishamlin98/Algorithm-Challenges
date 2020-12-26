@@ -60,3 +60,15 @@ class Solution:
                 return [nums[i][1], nums[j][1]]
 
 # leetcode submit region end(Prohibit modification and deletion)
+
+## Better solution
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        h = {}
+        for i, num in enumerate(nums):
+            n = target - num
+            if n not in h:
+                h[num] = i
+            else:
+                return [h[n], i]

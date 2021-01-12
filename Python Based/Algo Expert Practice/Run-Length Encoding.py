@@ -3,5 +3,7 @@
 # Any string length longer than 9 must be split - ie
 # "AAAAAAAAAAAAA" = "9A4A"
 
+# Coded in notebook - complete another day
+
 def runLengthEncoding(string):
     pass

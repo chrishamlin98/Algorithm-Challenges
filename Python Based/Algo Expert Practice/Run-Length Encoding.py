@@ -17,7 +17,8 @@ def runLengthEncoding(string):
             characters.append(str(length))
             characters.append(prev)
             length = 0
-            length += 1
+
+        length += 1
 
     characters.append(str(length))
     characters.append(string[len(string) - 1])

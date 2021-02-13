@@ -13,3 +13,12 @@ def firstDuplicateValue(array):
     if minimumSecondIndex == len(array):
         return -1
     return array[minimumSecondIndex]
+
+#  Optimal solution  Time = O(N)   Space = O(1)
+
+def firstDuplicateValue(array):
+    for value in array:
+		if array[abs(value) - 1] < 0:
+			return abs(value)
+		array[abs(value) - 1] *= -1
+	return -1

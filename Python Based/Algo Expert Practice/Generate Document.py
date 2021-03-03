@@ -1,7 +1,7 @@
 ## Given a string of characters and a document with a string of characters
 ## Can the document be made with the string of characters?
 ## If string is "aabbcc" and doc is "aabbccc" then doc cannot be made
-## because we are missing 1 "c".
+## because we are missing 1 "c"
 
 def generateDocument(characters, document):
     charCounts = {}

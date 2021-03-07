@@ -2,6 +2,11 @@
 # the insert, contains, and remove methods.
 # Feel free to add new properties and methods
 # to the class.
+
+# This is done recursively and stores frames on the call stack
+# Therefore, the space complexity is O(N) worst case
+# Completing this iteratively would allow O(1)
+
 class BST:
     def __init__(self, value):
         self.value = value

@@ -1,5 +1,8 @@
 # This file will take an input of values and find the median of the values without being in order
-# This code runs but incorrectly calculates the Q3 and IQR
+# This code runs and correctly calculates the Q1, Q3, and IQR
+from scipy.stats import iqr
+from numpy import quantile
+
 arrayOfValues = input("What are your numbers? ")
 
 
@@ -7,6 +10,18 @@ def main():
     input = list(map(int, arrayOfValues.split(' ')))
 
     input.sort()
+    dataset_IQR = iqr(input, interpolation='nearest')
+    q1 = quantile(input, 0.25, interpolation='nearest')
+    q3 = quantile(input, 0.75, interpolation='nearest')
+
+    print("The first quartile is: " + str(q1))
+    print("The third quartile is: " + str(q3))
+    print("The IQR is : " + str(dataset_IQR))
+
+
+main()
+
+"""
 
     if len(input) % 2 == 0:
         medianValue = (input[len(input) // 2] + input[len(input) // 2 - 1]) / 2
@@ -27,7 +42,7 @@ def main():
 main()
 # print(q1)
 
-'''
+
 # These are the algorithms I have been working with
 
 arrayOfValues = input()
@@ -48,4 +63,4 @@ while len(input) %2 != 0:
 print(medianValue)
 print(q1)
 
-'''
+"""

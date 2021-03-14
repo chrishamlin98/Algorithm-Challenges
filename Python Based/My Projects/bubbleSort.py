@@ -8,6 +8,7 @@ def bubbleSort(array):
 				isSorted = False
 	return array
 
+
 def swap(i, j, array):
 	array[i], array[j] = array[j], array[i]
-    pass
+	pass
